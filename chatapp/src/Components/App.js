@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Navigation from "./Navigation.js"
 import Chat from "./Chat.js"
 import styled from "styled-components"
@@ -13,10 +13,19 @@ const AppContainer = styled.div`
 `
 
 function App() {
+  const [search, setSearch] = useState('');
+  const [texts, setTexts] = useState([]);
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value)
+  }
+
+  const filteredTexts = texts.filter(text => text.includes(search))
+
   return (
     <AppContainer>
-      <Navigation />
-      <Chat />
+      <Navigation search={search} handleSearch={handleSearch} />
+      <Chat texts={filteredTexts}/>
     </AppContainer>
   );
 }
