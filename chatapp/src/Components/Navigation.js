@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import MessageList from "./MessageList.js"
+import Search from "./Search.js"
 
 const NavContainer = styled.div`
   justify-items: center;
