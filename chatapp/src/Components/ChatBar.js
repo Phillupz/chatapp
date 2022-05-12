@@ -1,68 +1,85 @@
 import React from "react"
 import styled from "styled-components"
+import SearchBar from "./ContactSearchBar.js"
 import { FaTrash } from "react-icons/fa"
+import { AiOutlineClose } from "react-icons/ai"
 
 const ChatBarCont = styled.div`
   display: grid;
   grid-template-columns: 70% 30%;
+  border-bottom: 1px solid black;
 `
 
 const ButtonDiv = styled.div`
-  background-color: pink;
-  height: 42.5px;
+  height: 51.5px;
   text-align: center;
   display: flex;
   position: relative;
 `
 
 const DeleteButton = styled.button`
-  right: 8px;
+  right: 16px;
   top: 20%;
   position: absolute;
-  background-color: none;
+  background-color: white;
   border: none;
+  height: 30px;
 `
 
 const MessageInfoCont = styled.div`
-  background-color: blue;
+  padding:.25%;
   display: grid;
   grid-template-columns: 6% 93%;
-  height: 42.5px
+  height: 51.4px;
 `
 
 const ImageCont = styled.div`
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  margin-left: 6%;
-`
-const Image = styled.img`
-  justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
 `
 
-const UserNameCont = styled.div`
+const Image = styled.img`
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+`
+
+const UserNameCont = styled.p`
   font-family: Helvetica;
   font-size: 14px;
   font-weight: 100;
-  background-color:green;
-  height: 40px;
+  height: 20px;
+  width:70%;
+  margin: auto;
+  margin-left: 16px;
 `
 
-function ChatBar() {
+function ChatBar({searchEngaged, handleSearchClose, masterData}) {
+
+  function handleClick() {
+    console.log("1")
+    handleSearchClose()
+  }
+
   return (
     <ChatBarCont>
-      <MessageInfoCont>
-        <ImageCont>
-          <Image src="#"/>
-        </ImageCont>
-        <UserNameCont>
-          <p>user name</p>
-        </UserNameCont>
-      </MessageInfoCont>
+      {searchEngaged 
+      ? 
+      <SearchBar masterData={masterData}/>
+      :
+      (<MessageInfoCont>
+         <ImageCont>
+           <Image src="#"/>
+         </ImageCont>
+         <UserNameCont>username</UserNameCont>
+       </MessageInfoCont>)
+      }
       <ButtonDiv>
-        <DeleteButton><FaTrash size={17}/></DeleteButton>
+        {searchEngaged 
+          ? <DeleteButton onClick={handleClick}><AiOutlineClose size={17}/></DeleteButton>
+          : <DeleteButton><FaTrash size={17}/></DeleteButton>
+        }
       </ButtonDiv>
     </ChatBarCont>
   )

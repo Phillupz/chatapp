@@ -4,21 +4,22 @@ import ChatBox from "./ChatBox.js"
 
 const ChatDisplay = styled.div`
   background-color: white;
-  height: 80%;
+  height: 85%;
   width: 99%;
   margin: auto;
   display: grid;
   align-content: end;
-  grid-auto-rows: 9%
+  grid-auto-rows: 10%
 `
 
-function ChatDisplayArea() {
+
+function ChatDisplayArea({searchEngaged}) {
+  console.log("3",searchEngaged)
   const mockData = [1, 2, 3]
   
   const chatBoxes = mockData.map((chat) => {
-    return (
-      <ChatBox />
-    )
+    console.log("1",searchEngaged)
+     return <ChatBox />
   })
 
   return (

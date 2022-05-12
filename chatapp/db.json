@@ -1,0 +1,60 @@
+{
+    "userdata": [
+      {
+        "id": 1,
+        "username": "Arya Stark",
+        "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
+        "messages": [
+          {
+            "id":1,
+            "author": "",
+            "photo" : "",
+            "date": "",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "username": "Bran Stark",
+        "photo": "https://i.ibb.co/64Th7Tf/bran-stark.jpg",
+        "messages": []
+      },
+      {
+        "id": 3,
+        "username": "Daenerys Targaryen",
+        "photo": "https://i.ibb.co/MGtTVGF/daenerys-targaryen.jpg",
+        "messages": []
+      },
+      {
+        "id": 4,
+        "username": "Jon Snow",
+        "photo": "https://i.ibb.co/cy3DXDH/jon-snow.jpg",
+        "messages": []
+      },
+      {
+        "id": 5,
+        "username": "Khal Drogo",
+        "photo": "https://i.ibb.co/K0gzGqc/khal-drogo.jpg",
+        "messages": []
+      },
+      {
+        "id": 6,
+        "username": "Robert Baratheon",
+        "photo": "https://i.ibb.co/F0TDpc9/robert-baratheon.jpg",
+        "messages": []
+      },
+      {
+        "id": 7,
+        "username": "Sansa Stark",
+        "photo": "https://i.ibb.co/nMF711B/sansa-stark.jpg",
+        "messages": []
+      },
+      {
+        "id": 8,
+        "username": "Tyrion Lannister",
+        "photo": "https://i.ibb.co/vv4T3vR/tyrion-lannister.jpg",
+        "messages": []
+      }
+    ]
+  }

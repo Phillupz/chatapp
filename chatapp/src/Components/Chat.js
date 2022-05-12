@@ -3,13 +3,12 @@ import styled from "styled-components"
 import DisplayArea from './DisplayArea.js'
 
 const ChatContainer = styled.div`
-  background-color: #CDCDCD; 
 `
 
-function Chat() {
+function Chat({searchEngaged, handleSearchClose, masterData}) {
   return (
     <ChatContainer>
-      <DisplayArea />
+      <DisplayArea masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
     </ChatContainer>
   )
 }

@@ -1,39 +1,79 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Message from "./Message.js"
+import { VscAdd } from "react-icons/vsc"
 
 const DmListContainer = styled.div`
   margin: auto;
   width: 50%;
-  background-color: #979797;
   width: 98%;
-  height: 86%;
+  height: 79.5%;
+  display: grid;
+  grid-auto-rows: 48px;
 `
 
 const Header = styled.h3`
-background-color: white;
-margin-top: 8%;
-margin-bottom: 4%;
+margin-top: 12px;
+margin-bottom: 3%;
+margin-left: 8px;
 font-family: Helvetica;
 font-size: 16px;
 font-weight: 100;
+width: 100%;
+text-align:left;
+height: 25px
 `
 
-const mockData = [1, 2, 3]
+const AddButton = styled.button`
+  margin-left: 52%;
+  background-color: white;
+  border: none;
+  height: 20px;
+  position: relative;
+  top: 2px
+`
+const Search = styled.input`
+  width: 96%;
+  height: 4%;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin-bottom: 12px;
+`
 
-function MessageList() {
+function MessageList({handleSearchRender, masterData, searchEngaged}) {
+  const [search, setSearch] = useState("")
+
+  function handleChange(e) {
+    setSearch(e.target.value)
+
+  }
+
+  function handleClick(e) {
+    handleSearchRender(e)
+  }
+
+  const displayedElements = masterData.filter((object) => {
+    if (object.username.toLowerCase().includes(search.toLowerCase()))
+      return object
+  })
     
-  const messageElement = mockData.map((element) => {
+  const messageElement = displayedElements.map((user) => {
     return (
       <React.Fragment>
-        <div><Message /></div>
+        <div><Message user={user} /></div>
       </React.Fragment>
     )
   })
 
   return (
     <React.Fragment>
-      <Header>Direct Messages</Header>
+      <Header>Direct Messages 
+        {searchEngaged 
+        ? <AddButton></AddButton> 
+        : <AddButton onClick={handleClick}><VscAdd size={18}/></AddButton>
+        }
+      </Header>
+      <Search onChange={handleChange} placeholder="Search..."></Search>
       <DmListContainer>{messageElement}</DmListContainer>
     </React.Fragment>
   )
