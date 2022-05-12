@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 import { AiOutlineSend } from "react-icons/ai"
 
@@ -25,9 +25,17 @@ const Search = styled.input`
 `
 
 function TextArea() {
+  function handleSubmit() {
+
+  }
+
   return (
   <TextCont>
-    <Search></Search>
+    <Search>
+      <form onSubmit={handleSubmit}>
+
+      </form>
+    </Search>
     <SendButton><AiOutlineSend size={22} /></SendButton>
   </TextCont>
   )
