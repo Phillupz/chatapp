@@ -1,0 +1,27 @@
+{
+  "convo1": [
+    {
+      "id": 1,
+      "author": "Dylan",
+      "photo" : "filepath",
+      "date": "5/11/2022",
+      "text": "This is a test"
+    },
+    {
+      "id": 1,
+      "author": "Dylan",
+      "photo" : "filepath",
+      "date": "5/11/2022",
+      "text": "This is a test"
+    }
+  ],
+  "convo2": [
+    {
+      "id": 1,
+      "author": "Dylan",
+      "photo" : "filepath",
+      "date": "5/11/2022",
+      "text": "This is a test"
+    }
+  ]
+}
