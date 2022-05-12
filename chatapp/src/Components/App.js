@@ -17,6 +17,7 @@ const AppContainer = styled.div`
 function App() {
   const [searchEngaged, setSearchEngaged] = useState(false)
   const [masterData, setMasterData] = useState([])
+  const [filterChat, setFilterChat] = useState('')
   
   useEffect(() => {
     fetch("http://localhost:3000/userdata")
@@ -32,10 +33,14 @@ function App() {
     setSearchEngaged(!searchEngaged)
   }
 
+  const userSearch = ""
+
+  const filteredChats = masterData.filter(chat => chat.username.includes(userSearch))
+
   return (
     <AppContainer>
       <Navigation searchEngaged={searchEngaged} masterData={masterData} handleSearchRender={handleSearchRender}/>
-      <Chat masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
+      <Chat masterData={filteredChats} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
     </AppContainer>
   );
 }

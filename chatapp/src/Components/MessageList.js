@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Message from "./Message.js"
 import { VscAdd } from "react-icons/vsc"
+import { FaCcMastercard } from "react-icons/fa"
 
 const DmListContainer = styled.div`
   margin: auto;
@@ -52,7 +53,19 @@ function MessageList({handleSearchRender, masterData, searchEngaged}) {
     handleSearchRender(e)
   }
 
-  const displayedElements = masterData.filter((object) => {
+  const usernamePool = [];
+
+  function removeDuplicates(message){
+    if (!usernamePool.includes(message.username))
+      {
+        usernamePool.push(message.username)
+        return message;
+      }
+  }
+
+  const users = masterData.filter(removeDuplicates)
+
+  const displayedElements = users.filter((object) => {
     if (object.username.toLowerCase().includes(search.toLowerCase()))
       return object
   })

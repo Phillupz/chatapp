@@ -13,13 +13,16 @@ const ChatDisplay = styled.div`
 `
 
 
-function ChatDisplayArea({searchEngaged}) {
-  console.log("3",searchEngaged)
+function ChatDisplayArea({searchEngaged, masterData}) {
   const mockData = [1, 2, 3]
+  console.log(masterData)
   
-  const chatBoxes = mockData.map((chat) => {
-    console.log("1",searchEngaged)
-     return <ChatBox />
+  const chatBoxes = masterData.map((message) => {
+     return (
+       <div className = "chatbox">
+        <ChatBox key={message.id} message={message}/>
+      </div>
+     )
   })
 
   return (

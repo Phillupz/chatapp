@@ -21,7 +21,7 @@ function DisplayArea({searchEngaged, handleSearchClose, masterData}) {
       <ChatBar masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
       {searchEngaged
       ? <PlaceholderDiv></PlaceholderDiv>
-      : <ChatDisplayArea searchEngaged/>
+      : <ChatDisplayArea searchEngaged={searchEngaged} masterData={masterData}/>
       }
       <TextArea />
     </ChatContainer>

@@ -48,13 +48,13 @@ const TextDisplay = styled.p`
   margin-top: 2px;
 `
 
-function ChatBox() {
+function ChatBox({message}) {
    return (
      <DmContainer>
        <ImageCont>
-         <Image src="#"/>
+         <Image src={message.photo}/>
        </ImageCont>
-       <UserNameCont>username<TextDisplay>Text</TextDisplay></UserNameCont>
+       <UserNameCont>{message.username}<TextDisplay>{message.message}</TextDisplay></UserNameCont>
        
      </DmContainer>
    )
