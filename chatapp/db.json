@@ -4,57 +4,55 @@
         "id": 1,
         "username": "Arya Stark",
         "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
-        "messages": [
-          {
-            "id":1,
-            "author": "",
-            "photo" : "",
-            "date": "",
-            "text": ""
-          }
-        ]
+        "message": "Lorem ipsum dolor sit amet"
       },
       {
         "id": 2,
         "username": "Bran Stark",
         "photo": "https://i.ibb.co/64Th7Tf/bran-stark.jpg",
-        "messages": []
+        "message": "consectetur adipiscing elit"
       },
       {
         "id": 3,
         "username": "Daenerys Targaryen",
         "photo": "https://i.ibb.co/MGtTVGF/daenerys-targaryen.jpg",
-        "messages": []
+        "message": "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
       },
       {
         "id": 4,
         "username": "Jon Snow",
         "photo": "https://i.ibb.co/cy3DXDH/jon-snow.jpg",
-        "messages": []
+        "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
       },
       {
         "id": 5,
         "username": "Khal Drogo",
         "photo": "https://i.ibb.co/K0gzGqc/khal-drogo.jpg",
-        "messages": []
+        "message": "nisi ut aliquip ex ea commodo consequat"
       },
       {
         "id": 6,
         "username": "Robert Baratheon",
         "photo": "https://i.ibb.co/F0TDpc9/robert-baratheon.jpg",
-        "messages": []
+        "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse"
       },
       {
         "id": 7,
         "username": "Sansa Stark",
         "photo": "https://i.ibb.co/nMF711B/sansa-stark.jpg",
-        "messages":  []
+        "message": "cillum dolore eu fugiat nulla pariatur."
       },
       {
         "id": 8,
         "username": "Tyrion Lannister",
         "photo": "https://ibb.co/M5ktc5Q",
-        "messages": []
+        "message": "Excepteur sint occaecat cupidatat non proident"
+      },
+      {
+        "id": 9,
+        "username": "Arya Stark",
+        "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
+        "message": "sunt in culpa qui officia deserunt mollit anim id est laborum"
       }
     ]
   }
