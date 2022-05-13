@@ -5,10 +5,10 @@ import DisplayArea from './DisplayArea.js'
 const ChatContainer = styled.div`
 `
 
-function Chat({searchEngaged, handleSearchClose, masterData}) {
+function Chat({searchEngaged, handleSearchClose, masterData, addNewTexts}) {
   return (
     <ChatContainer>
-      <DisplayArea masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
+      <DisplayArea masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged} addNewTexts={addNewTexts}/>
     </ChatContainer>
   )
 }

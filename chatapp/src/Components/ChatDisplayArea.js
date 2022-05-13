@@ -14,8 +14,6 @@ const ChatDisplay = styled.div`
 
 
 function ChatDisplayArea({searchEngaged, masterData}) {
-  const mockData = [1, 2, 3]
-  console.log(masterData)
   
   const chatBoxes = masterData.map((message) => {
      return (

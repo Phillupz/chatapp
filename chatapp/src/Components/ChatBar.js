@@ -58,7 +58,6 @@ const UserNameCont = styled.p`
 function ChatBar({searchEngaged, handleSearchClose, masterData}) {
 
   function handleClick() {
-    console.log("1")
     handleSearchClose()
   }
 

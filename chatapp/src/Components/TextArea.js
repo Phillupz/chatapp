@@ -29,7 +29,7 @@ function TextArea(addNewText) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http:localhost:3000/userdata", {
+    fetch("http://localhost:3000/userdata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -37,8 +37,8 @@ function TextArea(addNewText) {
       body: JSON.stringify({
         username: "someone",
         photo: "also someone",
-        message: message,
-        external: true
+        message: message
+        //external: true
       })
     })
       .then(resp => resp.json())
@@ -48,13 +48,13 @@ function TextArea(addNewText) {
   }
 
   return (
-  <TextCont>
-    {/* <Search></Search> */}
-    <form onSubmit={handleSubmit}>
+  // <TextCont>
+  //   <Search></Search>
+    <form onSubmit={handleSubmit} className="textInput">
       <input type="text" message="message" placeholder="Aa" value={message} onChange={e => setMessage(e.target.value)}/>
     </form>
-    {/* <SendButton><AiOutlineSend size={22} /></SendButton> */}
-  </TextCont>
+    /* <SendButton><AiOutlineSend size={22} /></SendButton>
+  </TextCont> */
   )
 }
 

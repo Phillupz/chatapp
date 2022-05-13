@@ -14,8 +14,7 @@ const PlaceholderDiv = styled.div`
   margin: auto;
 `
 
-function DisplayArea({searchEngaged, handleSearchClose, masterData}) {
-  console.log("3",searchEngaged)
+function DisplayArea({searchEngaged, handleSearchClose, masterData, addNewTexts}) {
   return (
     <ChatContainer>
       <ChatBar masterData={masterData} handleSearchClose={handleSearchClose} searchEngaged={searchEngaged}/>
@@ -23,7 +22,7 @@ function DisplayArea({searchEngaged, handleSearchClose, masterData}) {
       ? <PlaceholderDiv></PlaceholderDiv>
       : <ChatDisplayArea searchEngaged={searchEngaged} masterData={masterData}/>
       }
-      <TextArea />
+      <TextArea addNewTexts={addNewTexts}/>
     </ChatContainer>
   )
 }
