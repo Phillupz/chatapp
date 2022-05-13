@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import styled from "styled-components"
 import { AiOutlineSend } from "react-icons/ai"
 
@@ -24,12 +24,37 @@ const Search = styled.input`
   border-radius: 10px;
 `
 
-function TextArea() {
+function TextArea(addNewText) {
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("http://localhost:3000/userdata", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: "Tormund Giantsbane",
+        photo: "https://i.ibb.co/Z8JvTv8/tormund-giantsbane-game-thrones.jpg",
+        message: message
+        //external: true
+      })
+    })
+      .then(resp => resp.json())
+      .then(data => addNewText(data))
+
+    setMessage('');
+  }
+
   return (
-  <TextCont>
-    <Search></Search>
-    <SendButton><AiOutlineSend size={22} /></SendButton>
-  </TextCont>
+  // <TextCont>
+  //   <Search></Search>
+    <form onSubmit={handleSubmit} className="textInput">
+      <input type="text" message="message" placeholder="Aa" value={message} onChange={e => setMessage(e.target.value)}/>
+    </form>
+    /* <SendButton><AiOutlineSend size={22} /></SendButton>
+  </TextCont> */
   )
 }
 
