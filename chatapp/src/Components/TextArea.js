@@ -24,19 +24,36 @@ const Search = styled.input`
   border-radius: 10px;
 `
 
-function TextArea() {
-  function handleSubmit() {
+function TextArea(addNewText) {
+  const [message, setMessage] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("http:localhost:3000/userdata", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: "someone",
+        photo: "also someone",
+        message: message,
+        external: true
+      })
+    })
+      .then(resp => resp.json())
+      .then(data => addNewText(data))
+
+    setMessage('');
   }
 
   return (
   <TextCont>
-    <Search>
-      <form onSubmit={handleSubmit}>
-
-      </form>
-    </Search>
-    <SendButton><AiOutlineSend size={22} /></SendButton>
+    {/* <Search></Search> */}
+    <form onSubmit={handleSubmit}>
+      <input type="text" message="message" placeholder="Aa" value={message} onChange={e => setMessage(e.target.value)}/>
+    </form>
+    {/* <SendButton><AiOutlineSend size={22} /></SendButton> */}
   </TextCont>
   )
 }
