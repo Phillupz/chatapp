@@ -35,8 +35,8 @@ function TextArea(addNewText) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        username: "someone",
-        photo: "also someone",
+        username: "Tormund Giantsbane",
+        photo: "https://i.ibb.co/Z8JvTv8/tormund-giantsbane-game-thrones.jpg",
         message: message
         //external: true
       })

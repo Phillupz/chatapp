@@ -53,18 +53,6 @@
       "username": "Arya Stark",
       "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
       "message": "sunt in culpa qui officia deserunt mollit anim id est laborum"
-    },
-    {
-      "username": "someone",
-      "photo": "also someone",
-      "message": "asdf",
-      "id": 10
-    },
-    {
-      "username": "someone",
-      "photo": "also someone",
-      "message": "asaaaa",
-      "id": 11
     }
   ]
 }

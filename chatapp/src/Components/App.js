@@ -4,7 +4,7 @@ import Chat from "./Chat.js"
 import styled from "styled-components"
 
 const AppContainer = styled.div`
-  height: 650px;
+  height: 90vh;
   padding: 1%;
   border: 2px solid black;
   border-radius: 10px;
