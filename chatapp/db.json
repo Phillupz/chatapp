@@ -4,55 +4,64 @@
       "id": 1,
       "username": "Arya Stark",
       "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
-      "message": "Lorem ipsum dolor sit amet"
+      "message": "Lorem ipsum dolor sit amet",
+      "external": false
     },
     {
       "id": 2,
       "username": "Bran Stark",
       "photo": "https://i.ibb.co/64Th7Tf/bran-stark.jpg",
-      "message": "consectetur adipiscing elit"
+      "message": "consectetur adipiscing elit",
+      "external": false
     },
     {
       "id": 3,
       "username": "Daenerys Targaryen",
       "photo": "https://i.ibb.co/MGtTVGF/daenerys-targaryen.jpg",
-      "message": "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      "message": "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "external": false
     },
     {
       "id": 4,
       "username": "Jon Snow",
       "photo": "https://i.ibb.co/cy3DXDH/jon-snow.jpg",
-      "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
+      "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+      "external": false
     },
     {
       "id": 5,
       "username": "Khal Drogo",
       "photo": "https://i.ibb.co/K0gzGqc/khal-drogo.jpg",
-      "message": "nisi ut aliquip ex ea commodo consequat"
+      "message": "nisi ut aliquip ex ea commodo consequat",
+      "external": true
     },
     {
       "id": 6,
       "username": "Robert Baratheon",
       "photo": "https://i.ibb.co/F0TDpc9/robert-baratheon.jpg",
-      "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+      "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+      "external": false
     },
     {
       "id": 7,
       "username": "Sansa Stark",
       "photo": "https://i.ibb.co/nMF711B/sansa-stark.jpg",
-      "message": "cillum dolore eu fugiat nulla pariatur."
+      "message": "cillum dolore eu fugiat nulla pariatur.",
+      "external": false
     },
     {
       "id": 8,
       "username": "Tyrion Lannister",
-      "photo": "https://ibb.co/M5ktc5Q",
-      "message": "Excepteur sint occaecat cupidatat non proident"
+      "photo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.businessinsider.com%2Fimage%2F59a5ee15248849365d64d5f5%2Fimage.jpg&f=1&nofb=1",
+      "message": "Excepteur sint occaecat cupidatat non proident",
+      "external": false
     },
     {
       "id": 9,
       "username": "Arya Stark",
       "photo": "https://i.ibb.co/mTDrfnh/arya-stark.jpg",
-      "message": "sunt in culpa qui officia deserunt mollit anim id est laborum"
+      "message": "sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "external": false
     }
   ]
 }

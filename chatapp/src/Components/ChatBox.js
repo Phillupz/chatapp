@@ -5,11 +5,9 @@ const DmContainer = styled.div`
   // background-color: blue;
   display: grid;
   grid-template-columns: 7% 83%;
-  width: 45%;
+  width: 70%;
   height: 35px;
-  position: relative;
-  left: 4px;
-  align-items: baseline;
+  align-items: stretch;
   border: 1px solid black;
   border-radius: 10px;
   padding: 2px;
@@ -44,7 +42,7 @@ const Image = styled.img`
 const TextDisplay = styled.p`
   // background-color: orange;
   height: 16px;
-  width: 180%;
+  width: 215%;
   margin-top: 2px;
 `
 
@@ -55,7 +53,6 @@ function ChatBox({message}) {
          <Image src={message.photo}/>
        </ImageCont>
        <UserNameCont>{message.username}<TextDisplay>{message.message}</TextDisplay></UserNameCont>
-       
      </DmContainer>
    )
 }
