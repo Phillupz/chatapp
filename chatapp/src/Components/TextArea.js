@@ -37,8 +37,8 @@ function TextArea(addNewText) {
       body: JSON.stringify({
         username: "Tormund Giantsbane",
         photo: "https://i.ibb.co/Z8JvTv8/tormund-giantsbane-game-thrones.jpg",
-        message: message
-        //external: true
+        message: message,
+        external: true
       })
     })
       .then(resp => resp.json())
